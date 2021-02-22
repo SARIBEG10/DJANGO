@@ -19,7 +19,10 @@
 				<h6>${{ item.item_price}}</h6>
 			</div>
 			<div class="col-md-2">
-				<a href="{% url 'food:detail' item.id %}" class="btn btn-success"> Detail </a>
+				<a href="{% url 'food:detail' item.id %}" class="btn btn-success "> Detail </a>
+				<a href="{% url 'food:update_item' item.id %}" class="btn btn-success "> Update </a>
+				<a href="{% url 'food:delete_item' item.id %}" class="btn btn-success btn-lg"> Delete </a>
+
 			</div>
 		</div>
 	{% endfor %}
