@@ -38,14 +38,14 @@ class DetailClassView(DetailView):
     template_name = 'food/detail.html'
     context_object_name = 'item'
 
-#
-# def create_item(request):
-#     form = ItemForm(request.POST or None)
-#
-#     if form.is_valid():
-#         form.save()
-#         return redirect('food:index')
-#     return render(request, 'food/item-form.html', {'form': form})
+
+def create_item(request):
+    form = ItemForm(request.POST or None)
+
+    if form.is_valid():
+        form.save()
+        return redirect('food:index')
+    return render(request, 'food/item-form.html', {'form': form})
 
 
 # class based view for creating item besides the

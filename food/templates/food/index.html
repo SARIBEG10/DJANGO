@@ -17,6 +17,7 @@
 				<h4>{{ item.item_name }}</h4>
 				<h5>{{ item.item_desc }}</h5>
 				<h6>T{{ item.item_price }}</h6>
+				<h6> {{ item.user_name }}</h6>
 			</div>
 			<div class="col-md-2">
 				<a href="{% url 'food:detail' item.id %}" class="btn btn-success "> Detail </a>
